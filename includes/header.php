@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>local freelancing Platform</title>
-    <link rel="stylesheet" href="/local-freelancing-platfrom (project I)/css/style.css">
+    <link rel="stylesheet" href="/freelancing/css/style.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <a href="/local-freelancing-platfrom (project I)/index.php" class="logo">Local Freelancing Platform</a>
+            <a href="/freelancing/index.php" class="logo">Local Freelancing Platform</a>
             <nav>
                 <?php if (isset($_SESSION['user_id'])):
                     // Fetch user balance to display in header
@@ -22,16 +22,16 @@
                     <span style="color: var(--success-color); margin-right: 1.5rem;">
                         NPR <?php echo number_format($current_balance, 2); ?>
                     </span>
-                    <a href="/local-freelancing-platfrom (project I)/wallet.php">Wallet</a>
+                    <a href="/freelancing/wallet.php">Wallet</a>
                     <?php if ($_SESSION['role'] === 'freelancer'): ?>
-                        <a href="/local-freelancing-platfrom (project I)/freelancer_dashboard.php">Find Projects</a>
+                        <a href="/freelancing/freelancer_dashboard.php">Find Projects</a>
                     <?php elseif ($_SESSION['role'] === 'client'): ?>
-                        <a href="/local-freelancing-platfrom (project I)/client_dashboard.php">My Projects</a>
+                        <a href="/freelancing/client_dashboard.php">My Projects</a>
                     <?php endif; ?>
-                    <a href="/local-freelancing-platfrom (project I)/logout.php" class="btn btn-logout">Logout</a>
+                    <a href="/freelancing/logout.php" class="btn btn-logout">Logout</a>
                 <?php else: ?>
-                    <a href="/local-freelancing-platfrom (project I)/login.php">Log In</a>
-                    <a href="/local-freelancing-platfrom (project I)/signup.php" class="btn">Sign Up</a>
+                    <a href="/freelancing/login.php">Log In</a>
+                    <a href="/freelancing/signup.php" class="btn">Sign Up</a>
                 <?php endif; ?>
             </nav>
         </div>
